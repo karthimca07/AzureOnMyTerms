@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body lang=EN-US style='tab-interval:.5in;word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>A great project idea to learn Azure Service Bus using C#,
+from basics to advanced, is building a <b>&quot;Distributed Task Queue
+System&quot;</b>. This project would simulate a real-world scenario where
+multiple services (producers and consumers) communicate asynchronously using
+Azure Service Bus, processing tasks like job scheduling, messaging, and <span
+class=GramE>retries</span>. Here's a breakdown of the key components and
+learning opportunities:<o:p></o:p></p>
+
+<p class=MsoNormal><b>Project: Distributed Task Queue System<o:p></o:p></b></p>
+
+<p class=MsoNormal><b>Objective:<o:p></o:p></b></p>
+
+<p class=MsoNormal>Create a system where multiple producers submit tasks
+(messages), and multiple consumers process those tasks asynchronously. This
+will involve learning basic and advanced Azure Service Bus concepts such as
+queues, topics, message sessions, message properties, and dead-letter handling.<o:p></o:p></p>
+
+<p class=MsoNormal><b>Steps and Learning Focus:<o:p></o:p></b></p>
+
+<p class=MsoNormal><b>1. Set Up Azure Service Bus<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo1;tab-stops:list .5in'><b>Goal</b>:
+     Create an Azure Service Bus namespace and queues.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l10 level1 lfo1;tab-stops:list .5in'><b>Learning</b>:
+     Setting up Service Bus in Azure Portal, managing connections.<o:p></o:p></li>
+</ul>
+
+<p class=MsoNormal><b>2. Basic Producer (Send Messages to a Queue)<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo2;tab-stops:list .5in'><b>Goal</b>:
+     Develop a C# application that sends messages (tasks) to a Service Bus
+     queue.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo2;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l3 level2 lfo2;tab-stops:list 1.0in'>Send
+      simple text or JSON messages.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l3 level2 lfo2;tab-stops:list 1.0in'>Use <span
+      class=SpellE>QueueClient</span> or <span class=SpellE>ServiceBusSender</span>
+      to send messages.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l3 level2 lfo2;tab-stops:list 1.0in'>Explore
+      message properties such as <span class=SpellE>TimeToLive</span>, <span
+      class=SpellE>MessageId</span>, and <span class=SpellE>CorrelationId</span>.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>3. Basic Consumer (Receive and Process Messages from a
+Queue)<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo3;tab-stops:list .5in'><b>Goal</b>:
+     Create a C# application that retrieves and processes messages from the
+     queue.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l5 level1 lfo3;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l5 level2 lfo3;tab-stops:list 1.0in'>Receive
+      messages using <span class=SpellE>QueueClient</span> or <span
+      class=SpellE>ServiceBusReceiver</span>.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l5 level2 lfo3;tab-stops:list 1.0in'>Handle
+      message locking (<span class=SpellE>PeekLock</span> mode) and message
+      completion (<span class=SpellE>CompleteAsync</span>, <span class=SpellE>AbandonAsync</span>).<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l5 level2 lfo3;tab-stops:list 1.0in'>Explore
+      the differences between <span class=SpellE>ReceiveMode.PeekLock</span>
+      and <span class=SpellE>ReceiveMode.ReceiveAndDelete</span>.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>4. Error Handling and Dead-Letter Queue<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo4;tab-stops:list .5in'><b>Goal</b>:
+     Implement <span class=GramE>error handling</span> when processing messages
+     and route failed messages to the dead-letter queue (DLQ).<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo4;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l4 level2 lfo4;tab-stops:list 1.0in'>Manage
+      poison messages (messages that fail repeatedly).<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l4 level2 lfo4;tab-stops:list 1.0in'>Learn
+      about dead-letter queues and how to monitor or reprocess DLQ messages.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>5. Advanced: Implement Topics and Subscriptions<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo5;tab-stops:list .5in'><b>Goal</b>:
+     Introduce topics and subscriptions for broadcasting messages to multiple
+     consumers.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo5;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l0 level2 lfo5;tab-stops:list 1.0in'>Publish
+      messages to a topic and create multiple subscriptions.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l0 level2 lfo5;tab-stops:list 1.0in'>Learn
+      about subscription filters to direct specific messages to certain
+      consumers.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>6. Sessions and Message Ordering<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l7 level1 lfo6;tab-stops:list .5in'><b>Goal</b>:
+     Use sessions to process related messages in order.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l7 level1 lfo6;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l7 level2 lfo6;tab-stops:list 1.0in'>Implement
+      session-based messaging.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l7 level2 lfo6;tab-stops:list 1.0in'>Ensure
+      message ordering by using <span class=SpellE>SessionId</span> and
+      handling message sessions.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>7. Scheduled Messages and Delayed Delivery<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l12 level1 lfo7;tab-stops:list .5in'><b>Goal</b>:
+     Implement scheduled messages that get delivered <span class=GramE>at a
+     later time</span>.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l12 level1 lfo7;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l12 level2 lfo7;tab-stops:list 1.0in'>Use
+      the <span class=SpellE>ScheduleMessageAsync</span> API to delay message
+      delivery.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l12 level2 lfo7;tab-stops:list 1.0in'>Handle
+      scheduled message cancellation.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>8. Message Batching for Performance<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo8;tab-stops:list .5in'><b>Goal</b>:
+     Batch send and receive messages for more efficient processing.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo8;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l11 level2 lfo8;tab-stops:list 1.0in'>Learn
+      to batch send multiple messages to optimize throughput.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l11 level2 lfo8;tab-stops:list 1.0in'>Handle
+      batch message reception.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>9. Message Retry and Exponential Backoff<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l13 level1 lfo9;tab-stops:list .5in'><b>Goal</b>:
+     Implement retry policies with exponential backoff for message processing.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l13 level1 lfo9;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l13 level2 lfo9;tab-stops:list 1.0in'>Use
+      <span class=GramE>retry</span> patterns to gracefully handle transient
+      failures.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l13 level2 lfo9;tab-stops:list 1.0in'>Implement
+      a retry policy for your consumers to reprocess failed messages after a
+      delay.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>10. Monitoring and Logging<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l6 level1 lfo10;tab-stops:list .5in'><b>Goal</b>:
+     Integrate logging and monitoring for message processing.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l6 level1 lfo10;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l6 level2 lfo10;tab-stops:list 1.0in'>Use
+      Application Insights or Azure Monitor to track message processing and
+      performance.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l6 level2 lfo10;tab-stops:list 1.0in'>Log
+      important message metrics such as processing time, failure rates, and
+      throughput.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>11. Scale Consumers (Auto-Scaling with Azure Functions or
+<span class=SpellE>WebJobs</span>)<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo11;tab-stops:list .5in'><b>Goal</b>:
+     Scale out your <span class=GramE>consumers</span> using Azure Functions or
+     <span class=SpellE>WebJobs</span>, triggered by messages from the queue.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo11;tab-stops:list .5in'><b>Learning</b>:<o:p></o:p></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal style='mso-list:l2 level2 lfo11;tab-stops:list 1.0in'>Build
+      Azure Functions triggered by Service Bus messages.<o:p></o:p></li>
+  <li class=MsoNormal style='mso-list:l2 level2 lfo11;tab-stops:list 1.0in'>Auto-scale
+      consumers based on queue length or processing load.<o:p></o:p></li>
+ </ul>
+</ul>
+
+<p class=MsoNormal><b>Tools &amp; Libraries:<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l8 level1 lfo12;tab-stops:list .5in'><span
+     class=SpellE><span class=GramE><b>Azure.Messaging.ServiceBus</b></span></span>:
+     The official C# library for interacting with Azure Service Bus.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l8 level1 lfo12;tab-stops:list .5in'><b>Azure
+     SDKs</b>: For authentication and service management.<o:p></o:p></li>
+</ul>
+
+<p class=MsoNormal><b>Learning Outcomes:<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo13;tab-stops:list .5in'>Understand
+     core Azure Service Bus concepts: queues, topics, subscriptions,
+     dead-lettering, sessions, and message properties.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo13;tab-stops:list .5in'>Build
+     a robust, fault-tolerant, distributed messaging system using Azure Service
+     Bus.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo13;tab-stops:list .5in'>Master
+     advanced messaging patterns like message ordering, scheduling, retry
+     logic, and monitoring.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l9 level1 lfo13;tab-stops:list .5in'>Develop
+     expertise in integrating Azure Service Bus with C# applications.<o:p></o:p></li>
+</ul>
+
+<p class=MsoNormal><b>Final Deliverable:<o:p></o:p></b></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo14;tab-stops:list .5in'>A
+     fully functioning task queue system where producers (C# console apps or
+     web services) generate tasks and consumers (C# console apps, Azure
+     Functions, or <span class=SpellE>WebJobs</span>) process tasks
+     asynchronously.<o:p></o:p></li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo14;tab-stops:list .5in'>Bonus:
+     Add a dashboard (e.g., using Azure Monitor) to visualize the health and
+     performance of your system.<o:p></o:p></li>
+</ul>
+
+<p class=MsoNormal>This project will not only give you hands-on experience with
+Azure Service Bus but also teach you about real-world messaging patterns and
+best practices in distributed system design.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+</html>
