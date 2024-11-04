@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.35326.246
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "Publisher\Publisher.csproj", "{141CD66C-B5B4-45A1-B53C-D973DB0A7694}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1DFC5ABD-CDCC-4DA0-8B0A-0B0D504FD31E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receiver", "Receiver\Receiver.csproj", "{E05830FA-31CC-44C2-B14F-693903A9539B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{141CD66C-B5B4-45A1-B53C-D973DB0A7694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141CD66C-B5B4-45A1-B53C-D973DB0A7694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141CD66C-B5B4-45A1-B53C-D973DB0A7694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141CD66C-B5B4-45A1-B53C-D973DB0A7694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E05830FA-31CC-44C2-B14F-693903A9539B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E05830FA-31CC-44C2-B14F-693903A9539B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E05830FA-31CC-44C2-B14F-693903A9539B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E05830FA-31CC-44C2-B14F-693903A9539B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8562BBD6-6E1C-4698-8F49-9A35F8C6A2E6}
+	EndGlobalSection
+EndGlobal
